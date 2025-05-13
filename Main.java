@@ -1,12 +1,12 @@
 import java.util.Arrays;
 
 @FunctionalInterface
-interface Sorter<T> {
+interface Comparator<T> {
     int compare(T a, T b);
 }
 public class Main {
-    public static <T> void sortArray(T[] array, Sorter<T> sorter) {
-        Arrays.sort(array, (a, b) -> sorter.compare(a, b));
+    public static <T> void sortArray(T[] array, Comparator<T> comparator) {
+        Arrays.sort(array, (a, b) -> comparator.compare(a, b));
     }
     public static void main(String[] args) {
         Integer[] numbers = {5, 3, 4, 1, 2};
